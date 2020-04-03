@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.letter-info {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.textarea {
+    width: 800px;
+    height: 400px;
+    outline: none;
+    border: 2px solid #333;
+    padding: 15px;
+    font-size: 1.4rem;
+    resize: none;
+}
+
+.btn {
+    color: #333;
+    padding: 20px 35px;
+    font-size: 1.25rem;
+    border: 1px solid #333;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
