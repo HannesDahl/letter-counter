@@ -4,20 +4,29 @@ const letterInfo = document.querySelector('#letter-info'),
 
 document.addEventListener('DOMContentLoaded', () => {
     textarea.textContent = localStorage.getItem('text');
-    lettersLength(textarea.textLength);
+
+    let value = textarea.value;
+    value = value.split(" ");
+    value = value.length
+
+    characterCounter(textarea.textLength, value);
 });
 
 textarea.addEventListener('input', (e) => {
+    let value = e.target.value;
+    value = value.split(" ");
+    value = value.length
+
     localStorage.setItem('text', e.target.value);
-    lettersLength(e.target.textLength);
+    characterCounter(e.target.textLength, value);
 });
 
 copyButton.addEventListener('click', () => {
     copyToClipboard(textarea);
 });
 
-function lettersLength(num) {
-    letterInfo.textContent = `${num} characters`;
+function characterCounter(num, words) {
+    letterInfo.textContent = `${words} words, ${num} characters`;
 }
 
 function copyToClipboard(el) {
