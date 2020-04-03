@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 textarea.addEventListener('input', (e) => {
     let value = e.target.value;
-    value = value.split(" ");
+    value = value.split(" ").filter(index => index !== "");
     value = value.length
 
     localStorage.setItem('text', e.target.value);
